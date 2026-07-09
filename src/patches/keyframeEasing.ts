@@ -95,32 +95,45 @@ export function getEasingFunctionName(type: string, mode = 'inout') {
 }
 
 registerPatch({
-	id: `easing_peasy:keyframe-easing`,
+	id: `easing_peasy:keyframe/properties`,
 
 	apply: () => {
+		// @ts-expect-error - Blockbench types are broken.
+		const keyframe = Blockbench.Keyframe as typeof _Keyframe
 		const properties = [
-			new Property(Blockbench.Keyframe, 'string', 'easing', {
+			new Property(keyframe, 'string', 'easing', {
 				default: EASING_DEFAULT,
 				condition: () => Project?.format.animation_mode,
 			}),
 
-			new Property(Blockbench.Keyframe, 'array', 'easingArgs', {
+			new Property(keyframe, 'array', 'easingArgs', {
 				condition: () => Project?.format.animation_mode,
 			}),
 		]
 
-		const originalGetLerp = Blockbench.Keyframe.prototype.getLerp
-		Blockbench.Keyframe.prototype.getLerp = function (
-			this: _Keyframe,
-			other,
-			axis,
-			amount,
-			allowExpression
-		): number {
+		void UNMOUNT_LOADING_OVERLAY()
+
+		return { properties }
+	},
+	revert: ({ properties }) => {
+		for (const prop of properties) {
+			prop.delete()
+		}
+	},
+})
+
+registerPropertyOverridePatch({
+	id: 'easing_peasy:keyframe/getLerp',
+	// @ts-expect-error - Blockbench types are broken.
+	target: (Blockbench.Keyframe as typeof _Keyframe).prototype,
+	key: 'getLerp',
+
+	get(original) {
+		return function (this: _Keyframe, other, axis, amount, allowExpression): number {
 			const easing = other.easing ?? 'linear'
 
-			if (Project?.format.animation_mode || easing === 'linear')
-				return originalGetLerp.call(this, other, axis, amount, allowExpression)
+			if (!Project?.format.animation_mode || easing === 'linear')
+				return original.call(this, other, axis, amount, allowExpression)
 
 			let easingFunc = easingFunctions[easing]
 			if (hasArgs(easing)) {
@@ -141,17 +154,6 @@ registerPatch({
 			}
 			return result
 		}
-
-		void UNMOUNT_LOADING_OVERLAY()
-
-		return { properties, originalGetLerp }
-	},
-	revert: ({ properties, originalGetLerp }) => {
-		for (const prop of properties) {
-			prop.delete()
-		}
-
-		Blockbench.Keyframe.prototype.getLerp = originalGetLerp
 	},
 })
 

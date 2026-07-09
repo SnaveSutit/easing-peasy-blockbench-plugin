@@ -17,7 +17,7 @@
 		"type": "github",
 		"url": "https://github.com/SnaveSutit/easing-peasy-blockbench-plugin"
 	},
-	"description": "A Blockbench plugin that adds easing options to keyframes.",
+	"description": "Adds easing curves to animation keyframes, simplifying the process of creating smooth animations.",
 	"main": "./dist/index.js",
 	"types": "./dist/src/index.d.ts",
 	"private": true,

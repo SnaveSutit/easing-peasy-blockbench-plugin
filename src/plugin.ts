@@ -4,7 +4,7 @@ BBPlugin.register(PACKAGE.name, {
 	title: PACKAGE.title,
 	author: PACKAGE.author.name,
 	description: PACKAGE.description,
-	icon: 'create_session',
+	icon: 'icon.svg',
 	variant: 'both',
 	version: PACKAGE.version,
 	min_version: PACKAGE.min_blockbench_version,

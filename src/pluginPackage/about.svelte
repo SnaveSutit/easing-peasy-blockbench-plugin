@@ -4,7 +4,11 @@
 		animations.
 	</p>
 
-	<img src="" alt="Easing Peasy preview" style="width: 100%; max-width: 600px;" />
+	<img
+		src="https://raw.githubusercontent.com/SnaveSutit/easing-peasy-blockbench-plugin/refs/heads/main/src/assets/preview.webp"
+		alt="Easing Peasy preview"
+		style="width: 100%; max-width: 400px;"
+	/>
 
 	<h3>Features</h3>
 	<ul>

@@ -121,7 +121,9 @@
 							"uuid": "7d812298-040e-6445-2683-753fbbc621d8",
 							"time": 0,
 							"color": -1,
-							"interpolation": "linear"
+							"interpolation": "linear",
+							"easing": "linear",
+							"easingArgs": []
 						},
 						{
 							"channel": "position",
@@ -136,22 +138,23 @@
 							"time": 1,
 							"color": -1,
 							"interpolation": "linear",
-							"easing": "easeInOutBack",
-							"easingArgs": [2]
+							"easing": "easeInOutBack"
 						},
 						{
 							"channel": "position",
 							"data_points": [
 								{
 									"x": "0",
-									"y": "0",
+									"y": "10",
 									"z": "0"
 								}
 							],
 							"uuid": "03a97226-3e15-3a9f-e7f2-8d98104e4a50",
 							"time": 0.5,
 							"color": -1,
-							"interpolation": "linear"
+							"interpolation": "linear",
+							"easing": "easeInOutBack",
+							"easingArgs": []
 						}
 					]
 				}
