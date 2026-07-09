@@ -1,11 +1,11 @@
 {
-	"name": "blockbench_plugin_template",
-	"title": "BlockBench Plugin Template",
+	"name": "easing_peasy",
+	"title": "Easing Peasy",
 	"version": "1.0.0",
 	"tags": [
-		"Tag A",
-		"Tag B",
-		"Tag C"
+		"Animation",
+		"Easing",
+		"Tools"
 	],
 	"min_blockbench_version": "5.1.4",
 	"author": {
@@ -15,9 +15,9 @@
 	},
 	"repository": {
 		"type": "github",
-		"url": "https://github.com/SnaveSutit/blockbench-plugin-template"
+		"url": "https://github.com/SnaveSutit/easing-peasy-blockbench-plugin"
 	},
-	"description": "An advanced Blockbench plugin template",
+	"description": "A Blockbench plugin that adds easing options to keyframes.",
 	"main": "./dist/index.js",
 	"types": "./dist/src/index.d.ts",
 	"private": true,

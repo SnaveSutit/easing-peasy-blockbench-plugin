@@ -1,0 +1,52 @@
+easing_peasy:
+  loading_overlay:
+    title: Initializing Easing Peasy...
+  panel:
+    easings:
+      title: Keyframe Easing
+      easing_type:
+        title: Curve
+        description: The type of easing to apply to the keyframe.
+        options:
+          linear: Linear
+          sine: Sine
+          quad: Quad
+          cubic: Cubic
+          quart: Quart
+          quint: Quint
+          expo: Expo
+          circ: Circ
+          elastic: Elastic
+          back: Back
+          bounce: Bounce
+          step: Step
+      easing_mode:
+        title: Mode
+        description: The easing mode to apply to the keyframe.
+        options:
+          in: In
+          out: Out
+          inout: In-Out
+      easing_args:
+        description: The arguments to apply to the easing function.
+        easing_arg:
+          elastic:
+            title: Elasticity
+            description: The elasticity of the easing function.
+          back:
+            title: Overshoot
+            description: The amount of overshoot to apply to the easing function.
+          bounce:
+            title: Bounciness
+            description: The bounciness of the easing function.
+      nonlinear_interpolation: |-
+        [Markdown]
+        Only keyframes with `linear` interpolation can use advanced easing options.
+      no_keyframe_selected: |-
+        [Markdown]
+        No keyframe selected.
+
+        Please select a keyframe to edit its easing options.
+      first_keyframe_easing: |-
+        [Markdown]
+        The first keyframe in an animation cannot change its easing options, as it has no previous keyframe to interpolate from.

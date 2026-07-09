@@ -1,0 +1,161 @@
+{
+	"meta": {
+		"format_version": "5.0",
+		"model_format": "free",
+		"box_uv": false
+	},
+	"name": "keyframes",
+	"model_identifier": "",
+	"visible_box": [1, 1, 0],
+	"variable_placeholders": "",
+	"multi_file_ruleset": "",
+	"variable_placeholder_buttons": [],
+	"timeline_setups": [],
+	"unhandled_root_fields": {},
+	"resolution": {
+		"width": 16,
+		"height": 16
+	},
+	"elements": [
+		{
+			"name": "cube",
+			"box_uv": false,
+			"render_order": "default",
+			"locked": false,
+			"export": true,
+			"scope": 0,
+			"allow_mirror_modeling": true,
+			"from": [-8, 0, -8],
+			"to": [8, 16, 8],
+			"autouv": 1,
+			"color": 6,
+			"origin": [0, 0, 0],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 16, 16]
+				},
+				"east": {
+					"uv": [0, 0, 16, 16]
+				},
+				"south": {
+					"uv": [0, 0, 16, 16]
+				},
+				"west": {
+					"uv": [0, 0, 16, 16]
+				},
+				"up": {
+					"uv": [0, 0, 16, 16]
+				},
+				"down": {
+					"uv": [0, 0, 16, 16]
+				}
+			},
+			"type": "cube",
+			"uuid": "4e3ed26a-a52b-8db1-4fe2-588fb9694ea7"
+		}
+	],
+	"groups": [
+		{
+			"name": "group",
+			"uuid": "5fb0e9b9-8b63-b139-1bcd-12ace6ae7ff9",
+			"export": true,
+			"locked": false,
+			"scope": 0,
+			"selected": false,
+			"_static": {
+				"properties": {},
+				"temp_data": {}
+			},
+			"origin": [0, 0, 0],
+			"rotation": [0, 0, 0],
+			"color": 0,
+			"children": [],
+			"reset": false,
+			"shade": true,
+			"mirror_uv": false,
+			"visibility": true,
+			"autouv": 0,
+			"isOpen": true,
+			"primary_selected": false
+		}
+	],
+	"outliner": [
+		{
+			"uuid": "5fb0e9b9-8b63-b139-1bcd-12ace6ae7ff9",
+			"isOpen": true,
+			"children": ["4e3ed26a-a52b-8db1-4fe2-588fb9694ea7"]
+		}
+	],
+	"textures": [],
+	"animations": [
+		{
+			"uuid": "267ac0c6-9a50-3e6d-1327-bb56083f85b0",
+			"name": "animation",
+			"loop": "once",
+			"override": false,
+			"length": 1,
+			"snapping": 24,
+			"selected": true,
+			"group_name": "",
+			"scope": 0,
+			"anim_time_update": "",
+			"blend_weight": "",
+			"start_delay": "",
+			"loop_delay": "",
+			"animators": {
+				"5fb0e9b9-8b63-b139-1bcd-12ace6ae7ff9": {
+					"name": "group",
+					"type": "bone",
+					"rotation_global": false,
+					"quaternion_interpolation": false,
+					"keyframes": [
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "7d812298-040e-6445-2683-753fbbc621d8",
+							"time": 0,
+							"color": -1,
+							"interpolation": "linear"
+						},
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "fa5303e9-3b55-af5f-f95e-25b2419ac6b9",
+							"time": 1,
+							"color": -1,
+							"interpolation": "linear",
+							"easing": "easeInOutBack",
+							"easingArgs": [2]
+						},
+						{
+							"channel": "position",
+							"data_points": [
+								{
+									"x": "0",
+									"y": "0",
+									"z": "0"
+								}
+							],
+							"uuid": "03a97226-3e15-3a9f-e7f2-8d98104e4a50",
+							"time": 0.5,
+							"color": -1,
+							"interpolation": "linear"
+						}
+					]
+				}
+			}
+		}
+	]
+}
